@@ -1,4 +1,4 @@
-import GitHub from '../../assets/github.svg';
+import GitHub from '../../assets/Github.svg';
 import CV from '../../assets/CV.svg';
 import { Fade } from 'react-awesome-reveal';
 import Typewriter from '../TypeWriting';
