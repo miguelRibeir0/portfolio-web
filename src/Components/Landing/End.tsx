@@ -10,24 +10,11 @@ const End = () => {
   });
   return (
     <Fade>
-      <div className="flex flex-col items-center justify-center mt-20">
+      <div className="flex flex-col items-center justify-center mt-20 pl-12 pr-12">
         <div className="flex gap-x-3" ref={ref}>
           {inView && (
             <Typewriter
-              text="To see how I have been using my stack click"
-              speed={20}
-            />
-          )}
-          {inView && (
-            <Typewriter
-              text="here"
-              className="underline italic cursor-pointer"
-              speed={100}
-            />
-          )}
-          {inView && (
-            <Typewriter
-              text="or in the projects tab at the top of the page."
+              text="To see how I have been using my stack click in the projects tab at the top of the page."
               speed={20}
             />
           )}
