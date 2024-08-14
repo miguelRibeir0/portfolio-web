@@ -12,7 +12,7 @@ import { useInView } from 'react-intersection-observer';
 
 //Icons
 import React from '../../assets/React.svg';
-import MongoDb from '../../assets/MongoDb.svg';
+import MongoDb from '../../assets/MongoDB.svg';
 import Angular from '../../assets/Angular.svg';
 import ExpressJS from '../../assets/ExpressJS.svg';
 import NodeJS from '../../assets/NodeJS.svg';
