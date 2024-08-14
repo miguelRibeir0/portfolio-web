@@ -25,12 +25,13 @@ const useTypewriter = (text: string, speed = 50) => {
 interface TypewriterProps {
   text: string;
   speed?: number;
+  className?: string;
 }
 
-const Typewriter: React.FC<TypewriterProps> = ({ text, speed }) => {
+const Typewriter: React.FC<TypewriterProps> = ({ text, speed, className }) => {
   const displayText = useTypewriter(text, speed);
 
-  return <p>{displayText}</p>;
+  return <p className={className}>{displayText}</p>;
 };
 
 export default Typewriter;
