@@ -1,8 +1,8 @@
-import GitHub from '../../assets/Github.svg';
-import CV from '../../assets/CV.svg';
-import { Fade } from 'react-awesome-reveal';
-import Typewriter from '../TypeWriting';
-import { useInView } from 'react-intersection-observer';
+import GitHub from "../../assets/Github.svg";
+import CV from "../../assets/CV.svg";
+import { Fade } from "react-awesome-reveal";
+import Typewriter from "../TypeWriting";
+import { useInView } from "react-intersection-observer";
 
 const End = () => {
   const { ref, inView } = useInView({
@@ -10,7 +10,7 @@ const End = () => {
   });
   return (
     <Fade>
-      <div className="flex flex-col items-center justify-center mt-20 pl-12 pr-12">
+      <div className="mt-20 flex flex-col items-center justify-center pl-12 pr-12">
         <div className="flex gap-x-3" ref={ref}>
           {inView && (
             <Typewriter
@@ -19,12 +19,12 @@ const End = () => {
             />
           )}
         </div>
-        <div className="flex items-start justify-center mt-16 gap-x-10">
+        <div className="mt-16 flex items-start justify-center gap-x-10">
           <a href="https://github.com/miguelRibeir0" target="_blank">
-            <img src={GitHub} className="w-12 lg:w-16 cursor-pointer" />
+            <img src={GitHub} className="w-12 cursor-pointer lg:w-14" />
           </a>
           <a href="">
-            <img src={CV} className="w-12 lg:w-16 cursor-pointer" />
+            <img src={CV} className="w-12 cursor-pointer lg:w-14" />
           </a>
         </div>
       </div>
