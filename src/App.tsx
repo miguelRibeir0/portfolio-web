@@ -1,19 +1,30 @@
-import Hero from './Components/Landing/Hero';
-import Nav1 from './Components/Nav/Nav1';
-import ShortAbout from './Components/Landing/AboutMe(short)';
-import Stack from './Components/Landing/Stack';
-import End from './Components/Landing/End';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Landing from './Components/Landing/Landing';
+import AboutMe from './Components/About-me/AboutMe';
+import ContactMe from './Components/Contact-me/ContactMe';
+import Projects from './Components/Projects/Projects';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Landing />,
+  },
+  {
+    path: '/about-me',
+    element: <AboutMe />,
+  },
+  {
+    path: '/projects',
+    element: <Projects />,
+  },
+  {
+    path: '/contact-me',
+    element: <ContactMe />,
+  },
+]);
 
 function App() {
-  return (
-    <div className="bg-stone-950 text-white font-mono pb-10">
-      <Nav1 />
-      <Hero />
-      <ShortAbout />
-      <Stack />
-      <End />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

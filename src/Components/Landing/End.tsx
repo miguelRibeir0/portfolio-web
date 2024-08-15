@@ -20,8 +20,12 @@ const End = () => {
           )}
         </div>
         <div className="flex items-start justify-center mt-16 gap-x-10">
-          <img src={GitHub} className="w-16 cursor-pointer" />
-          <img src={CV} className="w-16 cursor-pointer" />
+          <a href="https://github.com/miguelRibeir0" target="_blank">
+            <img src={GitHub} className="w-12 lg:w-16 cursor-pointer" />
+          </a>
+          <a href="">
+            <img src={CV} className="w-12 lg:w-16 cursor-pointer" />
+          </a>
         </div>
       </div>
     </Fade>

@@ -69,7 +69,7 @@ const Stack = () => {
                   <div className="p-1 text-center">
                     <Card>
                       <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <img src={icons[index].path} />
+                        <img src={icons[index].path} className="select-none" />
                       </CardContent>
                     </Card>
                     <p className="mt-2">{icons[index].name}</p>
