@@ -3,11 +3,12 @@ import { useState } from "react";
 
 const cdnEndpoint = import.meta.env.VITE_CDN_ENDPOINT;
 
-type MaxFiveLanguages = [string?, string?, string?, string?, string?];
+type MaxFiveLanguages = [string, string?, string?, string?, string?];
 
 interface ProjectItemProps {
   index: number;
   mainLanguage: string;
+  image: string;
   description: string;
   code: string;
   website: string;
@@ -17,6 +18,7 @@ interface ProjectItemProps {
 const ProjectItem = ({
   index,
   mainLanguage,
+  image,
   description,
   code,
   website,
@@ -33,23 +35,23 @@ const ProjectItem = ({
       key={index}
     >
       <div
-        className="absolute -left-[2px] -top-10 flex h-20 w-fit min-w-20 items-center justify-center gap-x-2 rounded-xl border-2 border-white bg-stone-950 pl-2 pr-2"
+        className="absolute -left-[2px] -top-10 z-10 flex h-20 w-fit min-w-20 items-center justify-center gap-x-2 rounded-xl border-2 border-white bg-stone-950 pl-2 pr-2"
         id="languages"
       >
         <img src={mainLanguage} className="h-1/2" />
         {active
           ? languages?.map((language, index) => (
-              <img src={language} className="h-1/2" key={index} />
+              <img src={language} className="h-1/2 select-none" key={index} />
             ))
           : ""}
       </div>
-      <div className="absolute -bottom-[2px] -left-[2px] flex h-20 items-center justify-center rounded-xl border-2 border-white bg-stone-950">
+      <div className="absolute -bottom-[2px] -left-[2px] z-10 flex min-h-20 items-center justify-center rounded-xl border-2 border-white bg-stone-950">
         <p className="max-w-[180px] p-3 text-sm text-white lg:max-w-[340px]">
           {description}
         </p>
       </div>
       <div
-        className="absolute -bottom-[2px] -right-[2px] flex h-20 items-center justify-center gap-x-2 rounded-xl border-2 border-white bg-stone-950 p-3"
+        className="absolute -bottom-[2px] -right-[2px] z-10 flex h-20 items-center justify-center gap-x-2 rounded-xl border-2 border-white bg-stone-950 p-3"
         id="code/page"
       >
         <Link to={code} target="_blank">
@@ -65,11 +67,11 @@ const ProjectItem = ({
           />{" "}
         </Link>
       </div>
-      {active ? (
+      {active || languages?.[0] === "" ? (
         ""
       ) : (
         <div
-          className="absolute -top-4 left-[60px] flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-stone-950 transition duration-300 ease-in-out hover:bg-stone-800"
+          className="absolute -top-4 left-[60px] z-20 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-stone-950 transition duration-300 ease-in-out hover:bg-stone-800"
           id="+"
           onClick={showLanguages}
         >
@@ -81,6 +83,11 @@ const ProjectItem = ({
           />
         </div>
       )}
+      <img
+        src={image}
+        alt=""
+        className="absolute left-0 top-0 h-full w-full rounded-xl object-cover transition-opacity duration-300 ease-in-out hover:opacity-95 lg:opacity-70"
+      />
     </div>
   );
 };
