@@ -51,19 +51,19 @@ const ProjectItem = ({
         </p>
       </div>
       <div
-        className="absolute -bottom-[2px] -right-[2px] z-10 flex h-20 items-center justify-center gap-x-2 rounded-xl border-2 border-white bg-stone-950 p-3"
+        className="absolute -bottom-[2px] -right-[2px] z-10 flex h-20 items-center justify-center gap-x-4 rounded-xl border-2 border-white bg-stone-950 p-3"
         id="code/page"
       >
         <Link to={code} target="_blank">
           <img
             src={`${cdnEndpoint}/Portfolio/SVGS/Code.svg`}
-            className="lg:-8 w-6 cursor-pointer"
+            className="w-6 cursor-pointer lg:w-8"
           />
         </Link>
         <Link to={website} target="_blank">
           <img
             src={`${cdnEndpoint}/Portfolio/SVGS/WebPage.svg`}
-            className="w-4 cursor-pointer lg:w-6"
+            className="w-5 cursor-pointer lg:w-6"
           />{" "}
         </Link>
       </div>
@@ -86,7 +86,7 @@ const ProjectItem = ({
       <img
         src={image}
         alt=""
-        className="absolute left-0 top-0 h-full w-full rounded-xl object-cover transition-opacity duration-300 ease-in-out hover:opacity-95 lg:opacity-70"
+        className="absolute left-0 top-0 h-full w-full rounded-xl object-cover transition-opacity duration-300 ease-in-out hover:opacity-95 lg:opacity-80"
       />
     </div>
   );

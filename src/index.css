@@ -5,3 +5,13 @@
 body {
   background-color: #0c0a09;
 }
+
+@layer utilities {
+  .custom-justify {
+    text-align: justify;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-spacing: -0.02em; /* Adjust this as needed */
+  }
+}

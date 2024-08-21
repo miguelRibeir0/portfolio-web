@@ -1,25 +1,16 @@
-import Typewriter from '../TypeWriting';
-import { Fade } from 'react-awesome-reveal';
-import { useInView } from 'react-intersection-observer';
+import { Fade } from "react-awesome-reveal";
 
 const ShortAbout = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.1, // Trigger when 10% of the element is in view
-  });
-
   return (
-    <div
-      className="w-full h-72 flex items-center justify-center pr-12 pl-12"
-      ref={ref}
-    >
-      <div className="lg:w-1/2 w-full">
+    <div className="flex h-72 w-full items-center justify-center pl-12 pr-12">
+      <div className="w-full lg:w-1/2">
         <Fade>
-          {inView && (
-            <Typewriter
-              text="Hi! I'm a full-stack developer from Portugal with a passion for the world of web development and all of it's capabilities. I have experience working with a variety of technologies and am always looking to learn more. I'm currently looking for new opportunities to grow and develop my skills."
-              speed={10}
-            />
-          )}
+          <p className="custom-justify text-justify leading-relaxed">
+            Hi! I'm a full-stack developer from Portugal with a deep passion for
+            web development and its endless possibilities. Over the years, I've
+            honed my skills across a wide range of technologies, consistently
+            seeking out opportunities to learn and innovate.
+          </p>
         </Fade>
       </div>
     </div>

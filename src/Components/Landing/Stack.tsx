@@ -7,39 +7,24 @@ import {
   CarouselPrevious,
 } from "@/Components/ui/carousel";
 import { Fade } from "react-awesome-reveal";
-import Typewriter from "../TypeWriting";
-import { useInView } from "react-intersection-observer";
-
 import icons from "./IconsSVG";
 
 const Stack = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.1, // Trigger when 10% of the element is in view
-  });
-
   return (
-    <div
-      className="m-auto flex w-1/2 items-center justify-center pt-20"
-      ref={ref}
-    >
+    <div className="m-auto flex w-1/2 items-center justify-center pt-20">
       <Fade>
         <div>
           <div className="lg:p-0">
             <span className="mb-5 flex gap-x-4 text-3xl font-bold">
-              {inView && <Typewriter text="My Stack" />}
-              {inView && (
-                <Typewriter className="animate-pulse sm:hidden" text=">>" />
-              )}
+              <h3>My Stack</h3>
+              <p className="animate-pulse sm:hidden">&gt;&gt;</p>
             </span>
             <div className="mb-20 h-32 lg:mb-5">
-              {inView && (
-                <Typewriter
-                  text="My Main Stack is the MERN Stack (MongoDB, ExpressJS, React and
-              NodeJS) but I also have experience with other technologies as you
-              can check bellow."
-                  speed={10}
-                />
-              )}
+              <p>
+                My Main Stack is the MERN Stack (MongoDB, ExpressJS, React and
+                NodeJS) but I also have experience with other technologies as
+                you can check bellow.
+              </p>
             </div>
           </div>
           <Carousel className="m-auto w-full">
