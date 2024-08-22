@@ -9,7 +9,7 @@ const AboutMe = () => {
         <Nav variation={1} />
         <div className="h-32 w-full lg:h-24"></div> {/* nav filler */}
         <div className="flex items-center justify-center text-white">
-          <div className="m-2 flex flex-col items-center justify-center gap-y-10 lg:m-20">
+          <div className="m-2 flex flex-col items-center justify-center gap-y-10 lg:m-20 lg:mt-10">
             <Typewriter
               text="Who am I?"
               className="text-3xl font-bold"

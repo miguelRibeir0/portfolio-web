@@ -27,7 +27,7 @@ const Stack = () => {
               </p>
             </div>
           </div>
-          <Carousel className="m-auto w-full">
+          <Carousel className="m-auto w-full max-w-[1000px]">
             <CarouselContent className="-ml-1">
               {Array.from({ length: icons.length }).map((_, index) => (
                 <CarouselItem
