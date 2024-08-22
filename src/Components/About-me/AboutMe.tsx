@@ -12,7 +12,7 @@ const AboutMe = () => {
           <div className="m-2 flex flex-col items-center justify-center gap-y-10 lg:m-20 lg:mt-10">
             <Typewriter
               text="Who am I?"
-              className="text-3xl font-bold"
+              className="font-mono text-3xl font-bold"
               speed={100}
             />
             <div className="flex flex-col items-center justify-center gap-y-5">
@@ -27,7 +27,7 @@ const AboutMe = () => {
                 <p className="custom-justify mt-5 text-justify text-lg leading-relaxed">
                   I've worked with a variety of technologies, including
                   TypeScript, React, Angular, Node.js, and Express, and I'm
-                  always looking to learn something new that can add to my
+                  always looking to learn something new that I can add to my
                   stack.
                 </p>
                 <p className="custom-justify mt-5 text-justify text-lg leading-relaxed">

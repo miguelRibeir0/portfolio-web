@@ -47,7 +47,7 @@ const ContactMe = () => {
         <div className="flex items-center justify-center text-slate-50 lg:mt-10">
           <Typewriter
             text="Want to get in touch?"
-            className="text-2xl font-bold lg:text-3xl"
+            className="font-mono text-2xl font-bold lg:text-3xl"
             speed={50}
           />
         </div>
