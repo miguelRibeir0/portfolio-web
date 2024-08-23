@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Tooltip } from "react-tooltip";
 
 const cdnEndpoint = import.meta.env.VITE_CDN_ENDPOINT;
 
@@ -55,15 +56,21 @@ const ProjectItem = ({
         id="code/page"
       >
         <Link to={code} target="_blank">
+          <Tooltip id="Code" opacity={1} />
           <img
             src={`${cdnEndpoint}/Portfolio/SVGS/Code.svg`}
             className="w-6 cursor-pointer lg:w-8"
+            data-tooltip-id="Code"
+            data-tooltip-content="Code"
           />
         </Link>
         <Link to={website} target="_blank">
+          <Tooltip id="Website" opacity={1} />
           <img
             src={`${cdnEndpoint}/Portfolio/SVGS/WebPage.svg`}
             className="w-5 cursor-pointer lg:w-6"
+            data-tooltip-id="Website"
+            data-tooltip-content="Website"
           />{" "}
         </Link>
       </div>

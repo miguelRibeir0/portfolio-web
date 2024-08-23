@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+import { Tooltip } from "react-tooltip";
 
 const End = () => {
   return (
@@ -23,11 +24,14 @@ const End = () => {
             />
           </a>
           <a href="">
+            <Tooltip id="CV" opacity={1} />
             <img
               src={
                 "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/CV.svg"
               }
               className="w-12 cursor-pointer lg:w-14"
+              data-tooltip-id="CV"
+              data-tooltip-content="CV"
             />
           </a>
         </div>

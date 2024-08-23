@@ -1,6 +1,7 @@
 import Nav from "../Nav/Nav";
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "../TypeWriting";
+import { Tooltip } from "react-tooltip";
 
 const AboutMe = () => {
   return (
@@ -68,9 +69,12 @@ const AboutMe = () => {
             />
           </a>
           <a href="" target="_blank">
+            <Tooltip id="CV" opacity={1} />
             <img
               src="https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/CV.svg"
               className="w-12 cursor-pointer"
+              data-tooltip-id="CV"
+              data-tooltip-content="CV"
             />
           </a>
         </div>
