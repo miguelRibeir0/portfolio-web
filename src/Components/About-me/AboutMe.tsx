@@ -3,6 +3,8 @@ import { Fade } from "react-awesome-reveal";
 import Typewriter from "../TypeWriting";
 import { Tooltip } from "react-tooltip";
 
+const cdnEndpoint = import.meta.env.VITE_CDN_ENDPOINT;
+
 const AboutMe = () => {
   return (
     <Fade>
@@ -49,7 +51,7 @@ const AboutMe = () => {
                 </p>
               </div>
               <img
-                src="https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/profile.jpg"
+                src={`${cdnEndpoint}/Portfolio/profile.jpg`}
                 className="mb-10 mt-10 w-3/4 max-w-[850px] lg:mb-0 lg:mt-20"
               />
             </div>
@@ -58,20 +60,23 @@ const AboutMe = () => {
         <div className="mb-10 flex items-start justify-center gap-x-8">
           <a href="https://github.com/miguelRibeir0" target="_blank">
             <img
-              src="https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/Github.svg"
+              src={`${cdnEndpoint}/Portfolio/SVGS/Github.svg`}
               className="w-12 cursor-pointer"
             />
           </a>
           <a href="https://www.linkedin.com/in/miguelribeir0/" target="_blank">
             <img
-              src="https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/LinkedIn.svg"
+              src={`${cdnEndpoint}/Portfolio/SVGS/LinkedIn.svg`}
               className="w-12 cursor-pointer"
             />
           </a>
-          <a href="" target="_blank">
+          <a
+            href={`${cdnEndpoint}/Portfolio/CV-Miguel-Ribeiro.pdf`}
+            target="_blank"
+          >
             <Tooltip id="CV" opacity={1} />
             <img
-              src="https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/CV.svg"
+              src={`${cdnEndpoint}/Portfolio/SVGS/CV.svg`}
               className="w-12 cursor-pointer"
               data-tooltip-id="CV"
               data-tooltip-content="CV"

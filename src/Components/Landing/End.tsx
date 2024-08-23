@@ -1,6 +1,8 @@
 import { Fade } from "react-awesome-reveal";
 import { Tooltip } from "react-tooltip";
 
+const cdnEndpoint = import.meta.env.VITE_CDN_ENDPOINT;
+
 const End = () => {
   return (
     <Fade>
@@ -17,18 +19,17 @@ const End = () => {
         <div className="mt-16 flex items-start justify-center gap-x-10">
           <a href="https://github.com/miguelRibeir0" target="_blank">
             <img
-              src={
-                "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/Github.svg"
-              }
+              src={`${cdnEndpoint}/Portfolio/SVGS/Github.svg`}
               className="w-12 cursor-pointer lg:w-14"
             />
           </a>
-          <a href="">
+          <a
+            href={`${cdnEndpoint}/Portfolio/CV-Miguel-Ribeiro.pdf`}
+            target="_blank"
+          >
             <Tooltip id="CV" opacity={1} />
             <img
-              src={
-                "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/CV.svg"
-              }
+              src={`${cdnEndpoint}/Portfolio/SVGS/CV.svg`}
               className="w-12 cursor-pointer lg:w-14"
               data-tooltip-id="CV"
               data-tooltip-content="CV"

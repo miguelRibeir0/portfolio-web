@@ -83,9 +83,7 @@ const ProjectItem = ({
           onClick={showLanguages}
         >
           <img
-            src={
-              "https://personal-static-files-cdn.fra1.cdn.digitaloceanspaces.com/Portfolio/SVGS/Plus.svg"
-            }
+            src={`${cdnEndpoint}/Portfolio/SVGS/Plus.svg`}
             className="w-1/3"
           />
         </div>
