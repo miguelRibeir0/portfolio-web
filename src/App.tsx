@@ -4,6 +4,7 @@ import Landing from "./Components/Landing/Landing";
 import AboutMe from "./Components/About-me/AboutMe";
 import ContactMe from "./Components/Contact-me/ContactMe";
 import Projects from "./Components/Projects/Projects";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -16,19 +17,39 @@ const queryClient = new QueryClient({
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Landing />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Landing />
+      </>
+    ),
   },
   {
     path: "/about-me",
-    element: <AboutMe />,
+    element: (
+      <>
+        <ScrollToTop />
+        <AboutMe />
+      </>
+    ),
   },
   {
     path: "/projects",
-    element: <Projects />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Projects />
+      </>
+    ),
   },
   {
     path: "/contact-me",
-    element: <ContactMe />,
+    element: (
+      <>
+        <ScrollToTop />
+        <ContactMe />
+      </>
+    ),
   },
 ]);
 
