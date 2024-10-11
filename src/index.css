@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	min-height: 100vh;
-}
-
 @layer utilities {
 	.custom-justify {
 		text-align: justify;
 		-ms-hyphens: auto;
 		-webkit-hyphens: auto;
 		hyphens: auto;
-		word-spacing: -0.02em; /* Adjust this as needed */
+		word-spacing: -0.02em;
+	}
+}
+
+@layer base {
+	body {
+		@apply bg-stone-950;
 	}
 }
